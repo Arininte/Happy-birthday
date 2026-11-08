@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
 
 * {
     margin: 0;
@@ -7,128 +7,290 @@
 }
 
 body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
     min-height: 100vh;
-    padding: 20px 16px;
-    color: #4a5568;
+    font-family: 'Comfortaa', sans-serif;
+    background: linear-gradient(
+        135deg,
+        #fff0f5,
+        #ffe4ec,
+        #fce4f2,
+        #fff0f5
+    );
+    color: #713b50;
+    overflow-x: hidden;
 }
+
+/* Хөвөгч зүрх */
+
+#hearts-container {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.heart {
+    position: absolute;
+    bottom: -50px;
+    animation: floatHeart linear forwards;
+    opacity: 0.7;
+}
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Үндсэн контейнер */
 
 .container {
-    max-width: 440px; /* Утсанд тохируулсан өргөн */
-    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    max-width: 850px;
+    margin: auto;
+    padding: 40px 20px;
 }
 
-/* Header */
+/* Гарчиг */
+
 .header {
     text-align: center;
-    margin-top: 15px;
-    margin-bottom: 25px;
+    margin-bottom: 40px;
 }
 
-.icon-box {
-    display: inline-block;
-    padding: 12px;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    font-size: 32px;
-    margin-bottom: 10px;
-    backdrop-filter: blur(8px);
+.big-heart {
+    font-size: 65px;
+    animation: heartbeat 1.5s infinite;
+    margin-bottom: 15px;
 }
 
-h1 {
-    font-size: 24px;
-    color: #831843;
-    font-weight: 700;
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.2);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.15);
+    }
+}
+
+.top-text {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #d77c9d;
+    margin-bottom: 15px;
+}
+
+.header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 5vw, 43px);
+    color: #c34e78;
+    margin-bottom: 15px;
 }
 
 .subtitle {
     font-size: 14px;
-    color: #9d174d;
-    margin-top: 4px;
+    line-height: 1.8;
+    color: #986276;
 }
 
-/* Glassmorphism Карт */
+/* Карт */
+
 .card {
-    background: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 24px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 25px;
+    padding: 35px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 35px rgba(192, 90, 130, 0.12);
+    transition: 0.3s;
 }
 
-.card h2, .card h3 {
-    color: #831843;
-    margin-bottom: 10px;
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(192, 90, 130, 0.2);
+}
+
+.letter-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-decoration {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 65px;
+    color: #f9d5e2;
+    opacity: 0.5;
+}
+
+.card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    color: #c34e78;
+    margin-bottom: 22px;
 }
 
 .card p {
     font-size: 14px;
-    line-height: 1.6;
-    color: #374151;
+    line-height: 2.2;
+    color: #80566a;
+    white-space: pre-line;
 }
 
 .love-text {
     display: block;
-    margin-top: 12px;
-    color: #db2777;
-    font-weight: 600;
-    font-size: 14px;
+    text-align: center;
+    color: #d34f82;
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-style: italic;
+    margin-top: 25px;
 }
 
-.small-text {
-    font-size: 13px;
-    color: #6b7280;
-    margin-bottom: 15px;
-}
+/* Төв хэсэг */
 
 .center-content {
     text-align: center;
 }
 
-/* Товчлуур */
+.gift-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.small-text {
+    font-size: 13px !important;
+    margin-bottom: 25px;
+}
+
+/* Товч */
+
 .btn {
     display: inline-block;
-    width: 100%;
-    padding: 14px 20px;
-    background: linear-gradient(90deg, #ec4899, #f43f5e);
-    color: white;
+    border: none;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
+    cursor: pointer;
+
+    background: linear-gradient(
+        135deg,
+        #f28caf,
+        #d95789
+    );
+
+    color: white;
+    padding: 16px 28px;
     border-radius: 50px;
-    box-shadow: 0 4px 15px rgba(244, 63, 94, 0.3);
-    transition: transform 0.2s, opacity 0.2s;
-    text-align: center;
+
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+
+    box-shadow: 0 7px 20px rgba(217, 87, 137, 0.3);
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-5px) scale(1.04);
+    box-shadow: 0 12px 25px rgba(217, 87, 137, 0.4);
 }
 
 .btn:active {
-    transform: scale(0.97);
+    transform: scale(0.95);
 }
 
-.btn-secondary {
-    background: rgba(255, 255, 255, 0.7);
-    color: #831843;
-    box-shadow: none;
+/* Товч дарахад дэлбэрэх зүрх */
+
+.click-heart {
+    position: fixed;
+    z-index: 100;
+    pointer-events: none;
+    font-size: 25px;
+
+    animation: heartExplosion 1.2s ease-out forwards;
 }
 
-/* Галерей хэсэг */
+@keyframes heartExplosion {
+    0% {
+        transform: translate(-50%, -50%) scale(0.3);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(
+            calc(-50% + var(--x)),
+            calc(-50% + var(--y))
+        ) scale(1.5);
+        opacity: 0;
+    }
+}
+
+#heartMessage {
+    color: #d34f82;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px !important;
+    margin-top: 25px;
+    font-weight: bold;
+    animation: messageShow 0.5s ease;
+}
+
+@keyframes messageShow {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Зургийн цомог */
+
 .gallery-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
 }
 
 .photo-card {
-    background: rgba(255, 255, 255, 0.45);
-    border-radius: 20px;
+    background: white;
     padding: 12px;
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(192, 90, 130, 0.15);
+
+    transition: 0.4s;
+    overflow: hidden;
+}
+
+.photo-card:hover {
+    transform: translateY(-8px) rotate(-1deg);
+    box-shadow: 0 15px 35px rgba(192, 90, 130, 0.25);
 }
 
 .photo-card img {
@@ -136,43 +298,81 @@ h1 {
     height: 260px;
     object-fit: cover;
     border-radius: 14px;
+
+    transition: 0.5s;
 }
 
-.photo-caption {
-    text-align: center;
-    font-size: 13px;
-    font-weight: 600;
-    color: #831843;
-    margin-top: 10px;
-    margin-bottom: 4px;
+.photo-card:hover img {
+    transform: scale(1.04);
 }
+
+.photo-card p {
+    text-align: center;
+    padding: 15px 5px 8px;
+    font-size: 13px;
+    color: #c34e78;
+    font-weight: bold;
+}
+
+/* Эцсийн захиа */
+
+.final-message {
+    margin-top: 45px;
+}
+
+.final-message h2 {
+    font-size: 25px;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 30px 10px;
+    color: #c47794;
+    font-size: 12px;
+    line-height: 2;
+}
+
+/* Буцах товчны зай */
 
 .margin-top {
-    margin-top: 25px;
-    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
-/* Зүрхний анимэйшн */
-#hearts-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    overflow: hidden;
-    z-0: 0;
-}
+/* Гар утасны тохиргоо */
 
-.heart {
-    position: absolute;
-    bottom: -20px;
-    color: #ff4b72;
-    animation: float linear infinite;
-    user-select: none;
-}
+@media (max-width: 600px) {
 
-@keyframes float {
-    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-    100% { transform: translateY(-105vh) rotate(360deg); opacity: 0; }
+    .container {
+        padding: 30px 15px;
+    }
+
+    .card {
+        padding: 25px 20px;
+    }
+
+    .card h2 {
+        font-size: 23px;
+    }
+
+    .card p {
+        font-size: 12px;
+        line-height: 2;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .photo-card img {
+        height: 300px;
+    }
+
+    .btn {
+        padding: 14px 22px;
+        font-size: 12px;
+    }
+
 }
