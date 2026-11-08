@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Төрсөн өдрийн мэнд хүргэе.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Хөвөгч зүрхнүүдийн хэсэг -->
+    <div id="hearts-container"></div>
+
+    <div class="container">
+        <!-- Гарчиг -->
+        <div class="header">
+            <div class="icon-box">💖</div>
+            <h1>Төрсөн өдрийн мэнд бэби</h1>
+            <p class="subtitle">Хамгийн хөөрхөн</p>
+        </div>
+
+        <!-- Захидлын карт -->
+        <div class="card">
+            <h2>Бэби...</h2>
+            <p>
+                Өнөөдөр бол миний хувьд онцгой өдөр. Учир нь энэ өдөр миний хайртай хүн хорвоод мэндэлсэн шүү дээ. Ямар азаар би чамтай учирсан юм бол гэж хааяа өөрийн эрхгүй бодогддог. Хэрвээ би чамтай учраагүй, чамайг таньж мэдээгүй байсан бол миний амьдрал одоогийнхоос хэчнээн өөр, ямар уйтгартай байх байсан бол гэж бодохоор чамтай учирсандаа улам их баярладаг.
+
+Чамтай өнгөрүүлсэн мөч бүр, ярилцсан яриа бүр, хамтдаа инээсэн инээд бүр миний амьдралын нэг сайхан хэсэг болсон. Чи миний амьдралд ямар их аз жаргал, дулаахан мэдрэмж авчирдгийг өөрөө ч мэдэхгүй байхдаа.
+
+Төрсөн өдрийн мэнд хүргэе, миний бэби. Чамдаа маш их хайртай шүү. 
+            </p>
+            <span class="love-text">Хайртай шүү! 💕</span>
+        </div>
+
+        <!-- 2 дахь нүүр рүү шилжих товчлуур -->
+        <div class="card center-content">
+            <h3> Хэхэ бэби</h3>
+            <p class="small-text">Бидний хамтдаа авхуулсан зургуудыг үзэхийг хүсвэл доорх товчийг дараарай бэби!</p>
+            
+            <a href="tursun.html" class="btn">
+                Зургуудыг үзэх 💌
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function createHeart() {
+            const container = document.getElementById('hearts-container');
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+            heart.style.fontSize = (Math.random() * 15 + 15) + 'px';
+            container.appendChild(heart);
+
+            setTimeout(() => { heart.remove(); }, 6000);
+        }
+        setInterval(createHeart, 400);
+    </script>
+</body>
+</html>
