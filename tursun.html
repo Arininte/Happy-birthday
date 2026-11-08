@@ -1,109 +1,157 @@
 <!DOCTYPE html>
 <html lang="mn">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Бидний дурсамжууд 💗</title>
+    <title>Our Memories 🎀</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div id="hearts-container"></div>
+<div id="hearts-container"></div>
 
-    <main class="container">
+<main class="container">
 
-        <header class="header">
-            <div class="big-heart">💞</div>
+    <header class="header">
 
-            <p class="top-text">OUR LITTLE WORLD</p>
+        <div class="main-teddy">🐻‍❄️💗</div>
 
-            <h1>Зураг түүх өгүүлнэ 💖</h1>
+        <p class="top-text">OUR LITTLE WORLD</p>
 
-            <p class="subtitle">
-                Чамтай өнгөрүүлсэн мөч бүр миний хувьд үнэ цэнтэй.
-            </p>
-        </header>
+        <h1>Бидний бяцхан ертөнц 🌷</h1>
 
-        <section class="gallery-grid">
+        <p class="subtitle">
+            Чамтай өнгөрүүлсэн мөч бүр миний хамгийн дуртай дурсамж.
+        </p>
 
-            <div class="photo-card">
-                <img src="paper_ring.jpg" alt="Дурсамж 1">
-                <p>3 сарын 28 ❤️</p>
-            </div>
+        <div class="stars">✧ ˚ · . ✦ . · ˚ ✧</div>
 
-            <div class="photo-card">
-                <img src="galt_tereg.jpg" alt="Дурсамж 2">
-                <p>Хамтдаа зугаалсандаа бэби ❤️</p>
-            </div>
+    </header>
 
-            <div class="photo-card">
-                <img src="alsanda.jpg" alt="Дурсамж 3">
-                <p>Хүүхэд алаад хаяцан байншдээ ✨</p>
-            </div>
+    <div class="gallery-title">
+        <span>🎀</span>
+        <h2>Our Memories</h2>
+        <span>🎀</span>
+    </div>
 
-            <div class="photo-card">
-                <img src="deerlehdeg.jpg" alt="Дурсамж 4">
-                <p>Үргэлж хажууд минь байдагт баярлалаа ❤️</p>
-            </div>
+    <section class="gallery-grid">
 
-            <div class="photo-card">
-                <img src="bultsen.jpg" alt="Дурсамж 5">
-                <p>Хамгийн хөөрхөн охиндоо ❤️</p>
-            </div>
-
-            <div class="photo-card">
-                <img src="erhun.jpg" alt="Дурсамж 6">
-                <p>Эр хүндээ миний хайр нь ❤️</p>
-            </div>
-
-        </section>
-
-        <section class="card center-content final-message">
-
-            <div class="big-heart">💗</div>
-
-            <h2>Бидний түүх үргэлжилсээр...</h2>
-
-            <p>
-                Өнөөдөр, маргааш, ирээдүйд ч гэсэн
-                чамтайгаа олон сайхан дурсамж бүтээмээр байна.
-            </p>
-
-            <span class="love-text">Хайртай шүү, бэби! 💕</span>
-
-        </section>
-
-        <div class="center-content margin-top">
-            <a href="hair.html" class="btn">
-                ⬅ Нүүр хуудас руу буцах
-            </a>
+        <div class="photo-card">
+            <div class="photo-number">01 ♡</div>
+            <img src="paper_ring.jpg" alt="Дурсамж 1">
+            <p>3 сарын 28 ❤️</p>
         </div>
 
-        <footer>
-            <p>Our memories, our story. ❤️</p>
-        </footer>
+        <div class="photo-card">
+            <div class="photo-number">02 ♡</div>
+            <img src="galt_tereg.jpg" alt="Дурсамж 2">
+            <p>Хамтдаа зугаалсандаа бэби ❤️</p>
+        </div>
 
-    </main>
+        <div class="photo-card">
+            <div class="photo-number">03 ♡</div>
+            <img src="alsanda.jpg" alt="Дурсамж 3">
+            <p>Хүүхэд алаад хаяцан байншдээ ✨</p>
+        </div>
 
-    <script>
-        function createHeart() {
-            const container = document.getElementById('hearts-container');
-            const heart = document.createElement('div');
+        <div class="photo-card">
+            <div class="photo-number">04 ♡</div>
+            <img src="deerlehdeg.jpg" alt="Дурсамж 4">
+            <p>Үргэлж хажууд минь байдагт баярлалаа ❤️</p>
+        </div>
 
-            heart.className = 'heart';
-            heart.innerHTML = '💗';
+        <div class="photo-card">
+            <div class="photo-number">05 ♡</div>
+            <img src="bultsen.jpg" alt="Дурсамж 5">
+            <p>Хамгийн хөөрхөн охиндоо 💗</p>
+        </div>
 
-            heart.style.left = Math.random() * 100 + 'vw';
-            heart.style.animationDuration = (Math.random() * 4 + 4) + 's';
+        <div class="photo-card">
+            <div class="photo-number">06 ♡</div>
+            <img src="erhun.jpg" alt="Дурсамж 6">
+            <p>Эр хүндээ миний хайр нь ❤️</p>
+        </div>
 
-            container.appendChild(heart);
+    </section>
 
-            setTimeout(() => heart.remove(), 8000);
+    <section class="cute-card final-message">
+
+        <div class="card-emoji">💌</div>
+
+        <h2>To be continued...</h2>
+
+        <p>
+            Энэ бол бидний түүхийн зөвхөн эхлэл.
+            Цаашдаа хамтдаа маш олон гоё дурсамж бүтээнэ ээ.
+        </p>
+
+        <div class="love-text">I love you forever. ♡</div>
+
+    </section>
+
+    <div class="center-content">
+        <a href="hair.html" class="btn">♡ Нүүр хуудас руу буцах</a>
+    </div>
+
+    <footer>
+        <p>Our story is my favorite story. 💗</p>
+        <div>🎀 🌷 🧸 💕</div>
+    </footer>
+
+</main>
+
+<!-- Зураг томруулж харах -->
+<div class="lightbox" id="lightbox">
+    <span class="close-lightbox" id="closeLightbox">&times;</span>
+    <img id="lightboxImage" src="" alt="Томруулсан зураг">
+</div>
+
+<script>
+
+    function createHeart() {
+        const container = document.getElementById('hearts-container');
+        const heart = document.createElement('div');
+
+        heart.className = 'heart';
+
+        const emojis = ['💗', '♡', '💕', '🌸', '🎀'];
+
+        heart.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.animationDuration = (Math.random() * 5 + 5) + 's';
+
+        container.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 10000);
+    }
+
+    setInterval(createHeart, 700);
+
+    // Зураг томруулах
+    const photos = document.querySelectorAll('.photo-card img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+
+    photos.forEach(photo => {
+        photo.addEventListener('click', function() {
+            lightboxImage.src = this.src;
+            lightbox.classList.add('active');
+        });
+    });
+
+    document.getElementById('closeLightbox').onclick = function() {
+        lightbox.classList.remove('active');
+    };
+
+    lightbox.addEventListener('click', function(event) {
+        if (event.target === lightbox) {
+            lightbox.classList.remove('active');
         }
+    });
 
-        setInterval(createHeart, 700);
-    </script>
+</script>
 
 </body>
 </html>

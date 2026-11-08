@@ -3,175 +3,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Миний хайрдаа ❤️</title>
+    <title>For My Baby 🎀</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <div id="hearts-container"></div>
+<div id="hearts-container"></div>
 
-    <main class="container">
+<!-- Нээх дугтуй -->
+<div class="intro" id="intro">
+    <div class="intro-content">
+        <div class="teddy">🧸</div>
+        <p class="intro-small">A LITTLE SURPRISE FOR YOU</p>
+        <h1>Сайн уу, миний бэби? 💗</h1>
+        <p>Чамд зориулсан жижигхэн бэлэг байна...</p>
 
-        <header class="header">
-            <div class="big-heart">💗</div>
-            <p class="top-text">A SPECIAL DAY FOR SOMEONE SPECIAL</p>
-            <h1>Төрсөн өдрийн мэнд, бэби! ❤️</h1>
-            <p class="subtitle">Миний хамгийн хайртай, хамгийн хөөрхөн охинд...</p>
-        </header>
+        <div class="envelope" id="envelope">
+            <div class="envelope-back"></div>
+            <div class="letter-inside">💌</div>
+            <div class="envelope-front"></div>
+            <div class="envelope-flap"></div>
+            <div class="envelope-heart">❤️</div>
+        </div>
 
-        <section class="card letter-card">
-            <div class="card-decoration">♡</div>
+        <button class="btn open-btn" onclick="openLetter()">
+            Нээгээд үзээрэй 🎀
+        </button>
+    </div>
+</div>
 
-            <h2>Миний бэби...</h2>
+<!-- Үндсэн website -->
+<main class="container hidden" id="main">
+
+    <header class="header">
+
+        <div class="decoration">୨୧</div>
+
+        <div class="main-teddy">🧸💕</div>
+
+        <p class="top-text">♡ HAPPY BIRTHDAY MY LOVE ♡</p>
+
+        <h1>Төрсөн өдрийн мэнд<br>миний хөөрхөн бэби! 🎀</h1>
+
+        <p class="subtitle">
+            Миний амьдралын хамгийн гоё бэлэг бол чи шүү. 💗
+        </p>
+
+        <div class="stars">✦ ˚ . ✧ ˚ ✦</div>
+
+    </header>
+
+    <!-- Захидал -->
+    <section class="letter">
+
+        <div class="letter-top">
+            <span>♡ A LETTER FOR YOU ♡</span>
+            <span>🎀</span>
+        </div>
+
+        <div class="letter-body">
+
+            <div class="letter-flower">🌷</div>
+
+            <h2>Миний хайр...</h2>
 
             <p>
                 Өнөөдөр бол миний хувьд онцгой өдөр.
-                Учир нь энэ өдөр миний хайртай хүн хорвоод мэндэлсэн шүү дээ.
+                Учир нь энэ өдөр миний хайртай хүн хорвоод
+                мэндэлсэн шүү дээ.
 
                 Ямар азаар би чамтай учирсан юм бол гэж хааяа
-                өөрийн эрхгүй бодогддог. Хэрвээ би чамтай учраагүй,
-                чамайг таньж мэдээгүй байсан бол миний амьдрал
-                одоогийнхоос хэчнээн өөр, ямар уйтгартай байх байсан бол
-                гэж бодохоор чамтай учирсандаа улам их баярладаг.
+                өөрийн эрхгүй бодогддог. Хэрвээ би чамтай
+                учраагүй, чамайг таньж мэдээгүй байсан бол
+                миний амьдрал одоогийнхоос хэчнээн өөр,
+                ямар уйтгартай байх байсан бол.
 
                 Чамтай өнгөрүүлсэн мөч бүр, ярилцсан яриа бүр,
-                хамтдаа инээсэн инээд бүр миний амьдралын нэг
-                сайхан хэсэг болсон.
+                хамтдаа инээсэн инээд бүр миний амьдралын
+                хамгийн гоё дурсамжууд болсон.
 
                 Чи миний амьдралд ямар их аз жаргал,
                 дулаахан мэдрэмж авчирдгийг өөрөө ч мэдэхгүй байх.
 
                 Төрсөн өдрийн мэнд хүргэе, миний бэби.
+                Үргэлж инээмсэглэж, хүссэн бүхэндээ хүрч,
+                аз жаргалаар дүүрэн байгаарай.
+
                 Чамдаа маш их хайртай шүү. ❤️
             </p>
 
-            <div class="love-text">
-                Forever yours 💕
+            <div class="signature">
+                With all my love,
+                <br>
+                Your person ♡
             </div>
-        </section>
 
-        <!-- Зүрх илгээх товч -->
-        <section class="card center-content">
-            <div class="gift-icon">🎀</div>
+        </div>
 
-            <h2>Нэг жижигхэн зүйл байна...</h2>
+        <div class="letter-bottom">♡ ♡ ♡</div>
 
-            <p class="small-text">
-                Энэ товчийг дараад надаас нэг зүрх аваарай бэби.
-                Чамд өгөх зүрх хэзээ ч дуусахгүй шүү. ❤️
-            </p>
+    </section>
 
-            <button class="btn" id="heartButton">
-                Надад зүрх илгээгээрэй 💗
-            </button>
+    <!-- Зүрх илгээх -->
+    <section class="cute-card">
 
-            <p id="heartMessage"></p>
-        </section>
+        <div class="card-emoji">🐻‍❄️</div>
 
-        <!-- Дурсамжийн хэсэг -->
-        <section class="card center-content">
-            <div class="gift-icon">📸</div>
+        <h2>Надад нэг юм амлаарай...</h2>
 
-            <h2>Бидний дурсамжууд</h2>
+        <p>
+            Үргэлж инээмсэглэж байгаарай.
+            Учир нь чиний инээмсэглэл миний хамгийн дуртай зүйл. 💗
+        </p>
 
-            <p class="small-text">
-                Хамтдаа өнгөрүүлсэн хамгийн гоё мөчүүдээ
-                дахин нэг харах уу, бэби?
-            </p>
+        <button class="btn" id="heartButton">
+            Чамд зүрх илгээе ❤️
+        </button>
 
-            <a href="tursun.html" class="btn">
-                Дурсамжуудаа үзэх 💌
-            </a>
-        </section>
+        <p id="heartMessage"></p>
 
-        <footer>
-            <p>Made with all my love ❤️</p>
-            <p>Чамдаа хайртай. Үргэлж. ♡</p>
-        </footer>
+    </section>
 
-    </main>
+    <!-- Дурсамж -->
+    <section class="cute-card memory-card">
 
-    <script>
-        // Дэлгэцээр хөвөх зүрхнүүд
-        function createHeart() {
-            const container = document.getElementById('hearts-container');
+        <div class="card-emoji">📸</div>
+
+        <h2>Our Little Memories</h2>
+
+        <p>
+            Бидний хамтдаа бүтээсэн жижигхэн ертөнц...
+            Дурсамжуудаа дахин нэг үзэх үү?
+        </p>
+
+        <a href="tursun.html" class="btn">
+            Дурсамжуудаа үзэх 💌
+        </a>
+
+    </section>
+
+    <footer>
+        <div class="footer-heart">♡</div>
+        <p>Made with love, just for you.</p>
+        <p>Миний хамгийн хайртай хүн. 💗</p>
+        <div>🎀 🧸 🌷 🎀</div>
+    </footer>
+
+</main>
+
+<script>
+
+    // Дугтуй нээх
+    function openLetter() {
+        const intro = document.getElementById('intro');
+        const main = document.getElementById('main');
+
+        document.getElementById('envelope').classList.add('opened');
+
+        setTimeout(() => {
+            intro.classList.add('intro-hide');
+            main.classList.remove('hidden');
+            main.classList.add('show');
+        }, 800);
+    }
+
+    // Хөвөгч зүрх
+    function createHeart() {
+
+        const container = document.getElementById('hearts-container');
+        const heart = document.createElement('div');
+
+        const emojis = ['💗', '💕', '♡', '💖', '🎀', '🌸'];
+
+        heart.className = 'heart';
+        heart.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.animationDuration = (Math.random() * 5 + 5) + 's';
+        heart.style.fontSize = (Math.random() * 15 + 15) + 'px';
+
+        container.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 10000);
+    }
+
+    setInterval(createHeart, 700);
+
+    // Зүрх илгээх товч
+    const button = document.getElementById('heartButton');
+    const message = document.getElementById('heartMessage');
+
+    const messages = [
+        'Чамдаа хязгааргүй их хайртай! 💗',
+        'Миний хамгийн хөөрхөн бэби! 🎀',
+        'Чи миний аз жаргал шүү! 🧸',
+        'Чамтайгаа үргэлж хамт баймаар байна. ❤️',
+        'Миний зүрх зөвхөн чамд! 💌'
+    ];
+
+    button.addEventListener('click', function(event) {
+
+        const x = event.clientX;
+        const y = event.clientY;
+
+        const emojis = ['❤️', '💗', '💕', '💖', '💘', '🌸'];
+
+        for (let i = 0; i < 35; i++) {
+
             const heart = document.createElement('div');
 
-            heart.className = 'heart';
+            heart.className = 'click-heart';
+            heart.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
 
-            const hearts = ['❤️', '💕', '💗', '💖', '💘'];
+            heart.style.left = x + 'px';
+            heart.style.top = y + 'px';
 
-            heart.innerHTML = hearts[
-                Math.floor(Math.random() * hearts.length)
-            ];
+            const angle = Math.random() * Math.PI * 2;
+            const distance = Math.random() * 180 + 50;
 
-            heart.style.left = Math.random() * 100 + 'vw';
-            heart.style.animationDuration = (Math.random() * 4 + 4) + 's';
-            heart.style.fontSize = (Math.random() * 20 + 12) + 'px';
+            heart.style.setProperty('--x', Math.cos(angle) * distance + 'px');
+            heart.style.setProperty('--y', Math.sin(angle) * distance + 'px');
 
-            container.appendChild(heart);
+            document.body.appendChild(heart);
 
-            setTimeout(() => heart.remove(), 8000);
+            setTimeout(() => heart.remove(), 1500);
         }
 
-        setInterval(createHeart, 600);
+        message.innerText = messages[Math.floor(Math.random() * messages.length)];
 
+    });
 
-        // Товч дарахад зүрхнүүд дэлбэрэх эффект
-        const button = document.getElementById('heartButton');
-        const message = document.getElementById('heartMessage');
-
-        let clickCount = 0;
-
-        button.addEventListener('click', function(event) {
-
-            clickCount++;
-
-            const x = event.clientX;
-            const y = event.clientY;
-
-            const heartList = ['❤️', '💗', '💖', '💕', '💘', '💝'];
-
-            for (let i = 0; i < 25; i++) {
-
-                const heart = document.createElement('div');
-
-                heart.className = 'click-heart';
-
-                heart.innerHTML = heartList[
-                    Math.floor(Math.random() * heartList.length)
-                ];
-
-                heart.style.left = x + 'px';
-                heart.style.top = y + 'px';
-
-                const angle = Math.random() * Math.PI * 2;
-                const distance = Math.random() * 180 + 60;
-
-                const moveX = Math.cos(angle) * distance;
-                const moveY = Math.sin(angle) * distance;
-
-                heart.style.setProperty('--x', moveX + 'px');
-                heart.style.setProperty('--y', moveY + 'px');
-
-                document.body.appendChild(heart);
-
-                setTimeout(() => heart.remove(), 1200);
-            }
-
-            const messages = [
-                'Чамдаа маш их хайртай шүү! ❤️',
-                'Миний хамгийн хөөрхөн охин! 💗',
-                'Чи миний аз жаргал шүү! 💕',
-                'Үргэлж хамтдаа байя, бэби! 💖',
-                'Миний зүрх зөвхөн чамд! 💘'
-            ];
-
-            message.innerText =
-                messages[Math.floor(Math.random() * messages.length)];
-
-        });
-    </script>
+</script>
 
 </body>
 </html>
